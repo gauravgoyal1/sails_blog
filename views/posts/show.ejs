@@ -1,0 +1,12 @@
+<%= post.title %> - <%= post.content %>
+
+
+<form action="/posts/<%= post.id %>" method="POST">
+  Title:<br>
+  <input type="text" name="title" value="<%= post.title %>">
+  <br>
+  Content:<br>
+  <textarea name="content"><%= post.content %></textarea>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>

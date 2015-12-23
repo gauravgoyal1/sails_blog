@@ -1,0 +1,15 @@
+<ul>
+  <% posts.forEach(function(post){ %>
+  	<a href="/posts/<%= post.id %>"><%= post.title %></a> - <%= post.content %><br>
+  <% }); %>
+</ul>
+
+<form action="/posts" method="POST">
+  Title:<br>
+  <input type="text" name="title" value="">
+  <br>
+  Content:<br>
+  <textarea name="content" value=""></textarea>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
